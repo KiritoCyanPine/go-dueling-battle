@@ -18,10 +18,10 @@ func main() {
 	p1 := player.CreateCustomPlayer(player.Info{Name: "Daenerys", Title: "The Unburnt"}, player.Mage, 1, player.NoEffect, player.Fire, player.CreateCustomGenesis(110, 2), player.NewCustomCritical(100, 100))
 	p2 := player.NewRandomPlayer(player.Info{Name: "JonSnow", Title: "The Bastard"}, player.Knight, 1, player.Fire)
 
-	fmt.Println("your opponent is %v", p2)
+	fmt.Printf("your opponent is %v", p2)
 	status := duel.InProgress
 	for {
-		dueling := duel.CreateDuel(&p1, &p2)
+		dueling := duel.CreateDuel(p1, p2)
 
 		var w1, w2, w3 string
 		_, err := fmt.Scanln(&w1, &w2, &w3)

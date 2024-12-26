@@ -44,9 +44,9 @@ type Player struct {
 }
 
 // NewRandomPlayer will create a new player
-func NewRandomPlayer(info Info, class Class, level int, attribute Attributes) Player {
+func NewRandomPlayer(info Info, class Class, level int, attribute Attributes) *Player {
 	basestat := baseGenesisStats()
-	return Player{
+	return &Player{
 		info:         info,
 		baseStat:     basestat,
 		statuseffect: []StatusEffect{getRandomStatusEffect()},
@@ -59,8 +59,8 @@ func NewRandomPlayer(info Info, class Class, level int, attribute Attributes) Pl
 }
 
 // CreateCustomPlayer will create a new player
-func CreateCustomPlayer(info Info, class Class, level int, effect StatusEffect, attribute Attributes, basestat BaseGenesis, critical Critical) Player {
-	return Player{
+func CreateCustomPlayer(info Info, class Class, level int, effect StatusEffect, attribute Attributes, basestat BaseGenesis, critical Critical) *Player {
+	return &Player{
 		info:         info,
 		baseStat:     basestat,
 		statuseffect: []StatusEffect{effect},
