@@ -15,7 +15,7 @@ type attackInput struct {
 }
 
 func main() {
-	p1 := player.CreateCustomPlayer(player.Info{Name: "Daenerys", Title: "The Unburnt"}, player.Mage, 1, player.NoEffect, player.Fire, player.CreateCustomGenesis(110, 2), player.NewCustomCritical(100, 100))
+	p1 := player.CreateCustomPlayer(player.Info{Name: "Hisoka", Title: "The Transputor"}, player.Mage, 1, player.NoEffect, player.Fire, player.CreateCustomGenesis(110, 2), player.NewCustomCritical(100, 100))
 	p2 := player.NewRandomPlayer(player.Info{Name: "JonSnow", Title: "The Bastard"}, player.Knight, 1, player.Fire)
 
 	fmt.Printf("your opponent is %v", p2)
